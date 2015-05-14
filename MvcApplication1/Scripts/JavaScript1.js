@@ -46,7 +46,7 @@ world.controller( "countrieslist", function ( $scope ) {
                 $scope.status = true;
                 return "bg-danger"
             }
-            return $scope.countries = "";
+            return $scope.countries = ""  ;
         }
      //   angular.forEach( $scope.country_states, function ( country_states ) {
 
