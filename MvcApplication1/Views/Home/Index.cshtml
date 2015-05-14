@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div ng-app="world" ng-controller="countrieslist">
+    <header>
+        <div class="container-fluid ">
+            <div class="headertext container col-lg-6" style="color:white;">
+                <h1>Angular-JS Product show Room</h1>
+            </div>
+            <div class="col-lg-6 container">
+                <div class="row ">
+                    <button class="btn btn-success" ng-click="getstates()" style="margin-top:15px;float:right">Submit</button>
+                    <select ng-model="countryselect" name="selectit" ng-required="string" ng-change="checkit()" style="margin-top:20px;float:right">
+                        <option value="">--select--</option>
+                        <option ng-repeat="country in country_states" value="{{country.id}}">{{country.country}}</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <span ng-show="status" class="text-danger" style="float:right;margin-right:20px">Please select country from list</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="container-fluid col-lg-4">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td class="bg-primary" align="center" ng-class="bgstatus()">
+                            <h1> States in {{countries.country}}</h1>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="states in countries.states">
+                        <td class="bg-success" align="center">
+                            {{states}}
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
